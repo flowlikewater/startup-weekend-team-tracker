@@ -1,9 +1,8 @@
+<h1>Teams:</h1>
 <% @teams.each() do |team| %>
   <a href='/team/<%= team.id() %>'>
     <h1><%= team.teamname %></h1>
   </a>
-  <h1><%= team.description %></h1>
-  <h1><%= team.id %> </h1>
+  <h3><%= team.description %></h3>
+  <hr>
 <% end %>
-
-<h1><a href="/team_form">Add a new team!</a></h1>

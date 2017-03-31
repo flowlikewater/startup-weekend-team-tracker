@@ -1,0 +1,20 @@
+<form action='/team/<%= @team.id %>' method='post' style='overflow: hidden'>
+  <br>
+  <br>
+  <div style='float: left; clear: none;'>
+    <% @members.each() do |member| %>
+      <div class='container row'>
+        <input id='idmember' name='idmember' type='radio' style='float: left; clear: none; margin: 5px 5px 0 5px' value= "<%= member.memberid %>">
+        <label for='idmember' style='  float: left; clear: none; display: block; padding: 2px 1em 0 0;'> <%= member.membername %> | <%= member.membertype %> <label>
+      </div>
+    <% end %>
+  </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+  <button type='submit'>Add member</button>
+</form>

@@ -62,5 +62,19 @@ describe(Team) do
       expect(test_team.members).to(eq([test_member]))
     end
   end
+  # 
+  # describe('.deletemember') do
+  #   it('deletes a member from a specific team') do
+  #     test_member = Member.new({:membername => 'kevin', :membertype => 'engineer'})
+  #     test_member.savemember()
+  #     test_member2 = Member.new({:membername => 'ian', :membertype => 'engineer'})
+  #     test_member.savemember()
+  #     test_team = Team.new(:teamname => 'testname', :description => 'testdescription')
+  #     test_team.saveteam()
+  #     test_team.addmember(test_member)
+  #     test_team.addmember(test_member2)
+  #     test_team.deletemember(test_member.memberid)
+  #   end
+  # end
 
 end

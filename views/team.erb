@@ -1,2 +1,16 @@
 <h1> <%= @team.teamname %> </h1>
-<h1> <%= @team.description %> </h1>
+<h3> <%= @team.description %> </h3>
+<hr>
+<h3> Team members: </h3>
+<ol>
+  <% @team.members.each() do |member| %>
+    <li> <%= member.membername %> </li>
+    <!-- <form action='/team/<%= @team.id %>' method='post'>
+      <input name='deletemember' type='hidden' value='member.memberid' >
+      <button type='submit'>Delete member</button>
+    </form> -->
+  <% end %>
+</ol>
+
+
+<a href='/team/<%= @team.id %>/add_member_to_team'> <h3>Add members to your team!</h3> </a>

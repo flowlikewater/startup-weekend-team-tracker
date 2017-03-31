@@ -47,4 +47,10 @@ class Team
     @members.push(member)
   end
 
+  # define_singleton_method(:deletemember) do |memid|
+  #   self.members.each do |member|
+  #       @@teams.delete_if {member.memberid == memid}
+  #   end
+  # end
+
 end
