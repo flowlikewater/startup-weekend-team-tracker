@@ -17,8 +17,8 @@ class Team
     @members
   end
 
-  define_method(:teamid) do
-    @teamid
+  define_method(:id) do
+    @id
   end
 
   define_singleton_method(:all) do
@@ -36,7 +36,7 @@ class Team
   define_singleton_method(:findteam) do |id|
     foundteam = nil
     @@teams.each do |team|
-      if team.teamid == id
+      if team.id == id
         foundteam = team
       end
     end

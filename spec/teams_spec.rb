@@ -48,7 +48,7 @@ describe(Team) do
     it('finds the team based on its unique id') do
       test_team = Team.new({:teamname => 'testname', :description => 'testdescription'})
       test_team.saveteam()
-      expect(Team.findteam(test_team.teamid)).to(eq(test_team))
+      expect(Team.findteam(test_team.id)).to(eq(test_team))
     end
   end
 
