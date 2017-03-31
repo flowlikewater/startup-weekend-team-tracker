@@ -1,4 +1,5 @@
 require('pry')
+require('time')
 
 class Team
 
@@ -9,14 +10,33 @@ class Team
     @teamname = attr.fetch(:teamname)
     @description = attr.fetch(:description)
     @members = []
+    @id = Time.now.to_i
   end
 
-  define_method(:teamname) do
-    @teamname
+  define_method(:id) do
+    @id
   end
 
-  define_method(:description) do
-    @description
+  define_singleton_method(:all) do
+    @@teams
+  end
+
+  define_method(:saveteam) do
+    @@teams.push(self)
+  end
+
+  define_singleton_method(:clear) do
+    @@teams.clear()
+  end
+
+  define_singleton_method(:find) do |id|
+    foundteam = nil
+    @@teams.each do |team|
+      if team.id == id
+        foundteam = team
+      end
+    end
+    foundteam
   end
 
 end
