@@ -13,8 +13,12 @@ class Team
     @id = Time.now.to_i
   end
 
-  define_method(:id) do
-    @id
+  define_method(:members) do
+    @members
+  end
+
+  define_method(:teamid) do
+    @teamid
   end
 
   define_singleton_method(:all) do
@@ -29,14 +33,18 @@ class Team
     @@teams.clear()
   end
 
-  define_singleton_method(:find) do |id|
+  define_singleton_method(:findteam) do |id|
     foundteam = nil
     @@teams.each do |team|
-      if team.id == id
+      if team.teamid == id
         foundteam = team
       end
     end
     foundteam
+  end
+
+  define_method(:addmember) do |member|
+    @members.push(member)
   end
 
 end
