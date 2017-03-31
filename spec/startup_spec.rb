@@ -1,16 +1,16 @@
 require('rspec')
 require('startup')
 
-describe('#team_name') do
+describe('#teamname') do
   it('returns the name of the team') do
-    test_team = Team.new('testname', 'testdescription')
-    expect(test_team.name()).to(eq('testname'))
+    test_team = Team.new({:teamname => 'testname', :description => 'testdescription'})
+    expect(test_team.teamname()).to(eq('testname'))
   end
 end
 
-describe('#team_description') do
+describe('#teamdescription') do
   it('returns the description of the team') do
-    test_team = Team.new('testname', 'testdescription')
+    test_team = Team.new({:teamname => 'testname', :description => 'testdescription'})
     expect(test_team.description()).to(eq('testdescription'))
   end
 end
