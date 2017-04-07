@@ -1,8 +1,22 @@
-<h1>Teams:</h1>
-<% @teams.each() do |team| %>
-  <a href='/team/<%= team.id() %>'>
-    <h1><%= team.teamname %></h1>
-  </a>
-  <h3><%= team.description %></h3>
-  <hr>
+<div id=index-header>
+  <h1 class='site-description'>Startup weekend team tracker</h1>
+  <br>
+  <br>
+  <br>
+  <h2 class='site-description'>This app allows the Startup Weekend coordinator to add teams and team members for tracking purposes</h2>
+</div>
+
+<h3>List of Teams:</h3>
+
+<% if @teams.length() > 0 %>
+  <% @teams.each() do |team| %>
+    <a href='/team/<%= team.id() %>'>
+      <h3>Team name: <%= team.teamname %></h3>
+    </a>
+    <h5>Team description: <%= team.description %></h5>
+    <hr>
+  <% end %>
+<% else %>
+  <h3>No teams have been added yet</h3>
+  <h3><a href="/team_form">Add a team here!</a></h3>
 <% end %>

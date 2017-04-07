@@ -1,0 +1,17 @@
+.index {
+  text-align: center
+}
+
+#index-header {
+  text-align: center;
+  background-image: url('http://www.techstars.com/uploads/startup_weekend_main.png');
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px;
+}
+
+.site-description {
+  display:inline;
+  background-color: white;
+}
